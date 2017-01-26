@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Lato%3A100%2C300%2C400%2C700%2C900%2C400italic%2C700italic" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="lib/ngCordova/dist/ng-cordova.js"></script>
+    <script src="cordova.js"></script>
+
+    <!-- Ionic ios9 patch -->
+    <script src="lib/angular-ios9-uiwebview-patch/angular-ios9-uiwebview-patch.js"></script>
+
+    <!-- Include YT library and this directive -->
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="lib/angular-youtube-mb/dist/angular-youtube-embed.min.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+	  
+	    <!-- Ad-by ADITYA KUMAR -->
+	  <script type="text/javascript" src="js/admob_simple.js"></script>
+	
+  </head>
+  <body ng-app="youtubevideo" ng-controller="mycontroller">
+
+    <ion-pane>
+      <ion-header-bar class="bar-positive">
+        <!-- <h1 class="title"></h1> -->
+        <h1 class="title" style="padding-left:30%">
+			Worlds Biggest
+		  </h1>
+        <button class="button button-icon icon ion-ios-cog" ng-click="settingClick()"></button>
+      </ion-header-bar>
+
+      <ion-content class="has-noheader">
+        <!-- <div class="header-image"></div> -->
+         <ion-refresher
+          pulling-text="Pull to refresh..."
+          on-refresh="loadNewerVideos()">
+        </ion-refresher> 
+		    <div class="list card">
+          <div class="item item-text-wrap">
+            <h2>World's Youngest Mother, Age 5 Lina Medina</h2>
+            <p><i class="ion ion-eye"></i> 21,503,187</p>
+          </div>
+          <div class="item item-image">
+            <!-- <img ng-src="{{video.snippet.thumbnails.high.url}}"> -->
+            <!-- Use 'youtube-video' as an element or attribute. -->
+            <div class="embed-responsive embed-responsive-16by9">
+				<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/OD5IfyepMcE" ></iframe>
+            </div>
+          </div>
+          <div class="item item-divider">
+            <button class="button button-outline button-block button-positive">
+              Share this Video
+            </button>
+          </div>
+        </div>
+		  	    <div class="list card">
+          <div class="item item-text-wrap">
+            <h2>Top 5 Shark Attack Beaches</h2>
+            <p><i class="ion ion-eye"></i> 11,408,278</p>
+          </div>
+          <div class="item item-image">
+            <!-- <img ng-src="{{video.snippet.thumbnails.high.url}}"> -->
+            <!-- Use 'youtube-video' as an element or attribute. -->
+            <div class="embed-responsive embed-responsive-16by9">
+				<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/bGyqULJ9o30" ></iframe>
+            </div>
+          </div>
+          <div class="item item-divider">
+            <button class="button button-outline button-block button-positive">
+              Share this Video
+            </button>
+          </div>
+        </div>
+		  	    <div class="list card">
+          <div class="item item-text-wrap">
+            <h2>Top 10 Biggest Dogs In The World</h2>
+            <p><i class="ion ion-eye"></i> 10,269,386</p>
+          </div>
+          <div class="item item-image">
+            <!-- <img ng-src="{{video.snippet.thumbnails.high.url}}"> -->
+            <!-- Use 'youtube-video' as an element or attribute. -->
+            <div class="embed-responsive embed-responsive-16by9">
+				<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/QTWVJQ2LJlk" ></iframe>
+            </div>
+          </div>
+          <div class="item item-divider">
+            <button class="button button-outline button-block button-positive">
+              Share this Video
+            </button>
+          </div>
+        </div>
+		  	    <div class="list card">
+          <div class="item item-text-wrap">
+            <h2>World's Tallest Man and Woman</h2>
+            <p><i class="ion ion-eye"></i> 7,613,410</p>
+          </div>
+          <div class="item item-image">
+            <!-- <img ng-src="{{video.snippet.thumbnails.high.url}}"> -->
+            <!-- Use 'youtube-video' as an element or attribute. -->
+            <div class="embed-responsive embed-responsive-16by9">
+				<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/FCKAD1MLyKY" ></iframe>
+            </div>
+          </div>
+          <div class="item item-divider">
+            <button class="button button-outline button-block button-positive">
+              Share this Video
+            </button>
+          </div>
+        </div>
+		  	    <div class="list card">
+          <div class="item item-text-wrap">
+            <h2>Top 5 Places More Mysterious Than The Bermuda Triangle</h2>
+            <p><i class="ion ion-eye"></i> 6,951,929</p>
+          </div>
+          <div class="item item-image">
+            <!-- <img ng-src="{{video.snippet.thumbnails.high.url}}"> -->
+            <!-- Use 'youtube-video' as an element or attribute. -->
+            <div class="embed-responsive embed-responsive-16by9">
+				<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/6y2wb_gO51M" ></iframe>
+            </div>
+          </div>
+          <div class="item item-divider">
+            <button class="button button-outline button-block button-positive">
+              Share this Video
+            </button>
+          </div>
+        </div>
+		    	    <div class="list card">
+          <div class="item item-text-wrap">
+            <h2>Top 10 Most Venomous Spiders</h2>
+            <p><i class="ion ion-eye"></i> 6,706,702</p>
+          </div>
+          <div class="item item-image">
+            <!-- <img ng-src="{{video.snippet.thumbnails.high.url}}"> -->
+            <!-- Use 'youtube-video' as an element or attribute. -->
+            <div class="embed-responsive embed-responsive-16by9">
+				<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/mOvmBNLQIi4" ></iframe>
+            </div>
+          </div>
+          <div class="item item-divider">
+            <button class="button button-outline button-block button-positive">
+              Share this Video
+            </button>
+          </div>
+        </div>
+		    	    <div class="list card">
+          <div class="item item-text-wrap">
+            <h2>Top 5 People Who Took Revenge to a Whole New Level</h2>
+            <p><i class="ion ion-eye"></i> 6,475,377</p>
+          </div>
+          <div class="item item-image">
+            <!-- <img ng-src="{{video.snippet.thumbnails.high.url}}"> -->
+            <!-- Use 'youtube-video' as an element or attribute. -->
+            <div class="embed-responsive embed-responsive-16by9">
+				<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/C-P-qjmky88" ></iframe>
+            </div>
+          </div>
+          <div class="item item-divider">
+            <button class="button button-outline button-block button-positive">
+              Share this Video
+            </button>
+          </div>
+        </div>
+		    	    <div class="list card">
+          <div class="item item-text-wrap">
+            <h2>5 People Who Survived Your Worst Nightmare</h2>
+            <p><i class="ion ion-eye"></i> 5,935,358</p>
+          </div>
+          <div class="item item-image">
+            <!-- <img ng-src="{{video.snippet.thumbnails.high.url}}"> -->
+            <!-- Use 'youtube-video' as an element or attribute. -->
+            <div class="embed-responsive embed-responsive-16by9">
+				<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/1QlUFodsatY" ></iframe>
+            </div>
+          </div>
+          <div class="item item-divider">
+            <button class="button button-outline button-block button-positive">
+              Share this Video
+            </button>
+          </div>
+        </div>
+		    	    <div class="list card">
+          <div class="item item-text-wrap">
+            <h2>Top 5 Bodybuilders Who Went Too Far</h2>
+            <p><i class="ion ion-eye"></i> 5,378,207</p>
+          </div>
+          <div class="item item-image">
+            <!-- <img ng-src="{{video.snippet.thumbnails.high.url}}"> -->
+            <!-- Use 'youtube-video' as an element or attribute. -->
+            <div class="embed-responsive embed-responsive-16by9">
+				<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Pz_pq-A0SrU" ></iframe>
+            </div>
+          </div>
+          <div class="item item-divider">
+            <button class="button button-outline button-block button-positive">
+              Share this Video
+            </button>
+          </div>
+        </div>
+		    	    <div class="list card">
+          <div class="item item-text-wrap">
+            <h2>Top 10 Richest People in the World 2015</h2>
+            <p><i class="ion ion-eye"></i>4,542,519</p>
+          </div>
+          <div class="item item-image">
+            <!-- <img ng-src="{{video.snippet.thumbnails.high.url}}"> -->
+            <!-- Use 'youtube-video' as an element or attribute. -->
+            <div class="embed-responsive embed-responsive-16by9">
+				<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/hSazPby9jj8" ></iframe>
+            </div>
+          </div>
+          <div class="item item-divider">
+            <button class="button button-outline button-block button-positive">
+              Share this Video
+            </button>
+          </div>
+        </div>
+		    	    <div class="list card">
+          <div class="item item-text-wrap">
+            <h2>5 Most Expensive Virginities Ever Sold</h2>
+            <p><i class="ion ion-eye"></i> 4,247,827</p>
+          </div>
+          <div class="item item-image">
+            <!-- <img ng-src="{{video.snippet.thumbnails.high.url}}"> -->
+            <!-- Use 'youtube-video' as an element or attribute. -->
+            <div class="embed-responsive embed-responsive-16by9">
+				<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/AsJyRFiruwo" ></iframe>
+            </div>
+          </div>
+          <div class="item item-divider">
+            <button class="button button-outline button-block button-positive">
+              Share this Video
+            </button>
+          </div>
+        </div>
+		    	    <div class="list card">
+          <div class="item item-text-wrap">
+            <h2>15 Photos That Shocked The World</h2>
+            <p><i class="ion ion-eye"></i> 4,438,739</p>
+          </div>
+          <div class="item item-image">
+            <!-- <img ng-src="{{video.snippet.thumbnails.high.url}}"> -->
+            <!-- Use 'youtube-video' as an element or attribute. -->
+            <div class="embed-responsive embed-responsive-16by9">
+				<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/a9OaISenBJw" ></iframe>
+            </div>
+          </div>
+          <div class="item item-divider">
+            <button class="button button-outline button-block button-positive">
+              Share this Video
+            </button>
+          </div>
+        </div>
+		    	    <div class="list card">
+          <div class="item item-text-wrap">
+            <h2>Top 5 Strongest Kids in the World</h2>
+            <p><i class="ion ion-eye"></i> 1,568,971</p>
+          </div>
+          <div class="item item-image">
+            <!-- <img ng-src="{{video.snippet.thumbnails.high.url}}"> -->
+            <!-- Use 'youtube-video' as an element or attribute. -->
+            <div class="embed-responsive embed-responsive-16by9">
+				<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/03cQVJxagEk" ></iframe>
+            </div>
+          </div>
+          <div class="item item-divider">
+            <button class="button button-outline button-block button-positive">
+              Share this Video
+            </button>
+          </div>
+        </div>
+		      <div class="list card">
+          <div class="item item-text-wrap">
+            <h2>Top 10 Biggest Roller Coasters in the World 2014 HD</h2>
+            <p><i class="ion ion-eye"></i> 1,554,031</p>
+          </div>
+          <div class="item item-image">
+            <!-- <img ng-src="{{video.snippet.thumbnails.high.url}}"> -->
+            <!-- Use 'youtube-video' as an element or attribute. -->
+            <div class="embed-responsive embed-responsive-16by9">
+				<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/xIjjchqzDFg" ></iframe>
+            </div>
+          </div>
+          <div class="item item-divider">
+            <button class="button button-outline button-block button-positive">
+              Share this Video
+            </button>
+          </div>
+        </div>
+		      <div class="list card">
+          <div class="item item-text-wrap">
+            <h2>Amazing and Mysterious Places You Can't Visit</h2>
+            <p><i class="ion ion-eye"></i> 1,514,981</p>
+          </div>
+          <div class="item item-image">
+            <!-- <img ng-src="{{video.snippet.thumbnails.high.url}}"> -->
+            <!-- Use 'youtube-video' as an element or attribute. -->
+            <div class="embed-responsive embed-responsive-16by9">
+				<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/7e46zKA3z2Q" ></iframe>
+            </div>
+          </div>
+          <div class="item item-divider">
+            <button class="button button-outline button-block button-positive">
+              Share this Video
+            </button>
+          </div>
+        </div>
+		      <div class="list card">
+          <div class="item item-text-wrap">
+            <h2>The 25 most beautiful places on earth</h2>
+            <p><i class="ion ion-eye"></i> 702,694</p>
+          </div>
+          <div class="item item-image">
+            <!-- <img ng-src="{{video.snippet.thumbnails.high.url}}"> -->
+            <!-- Use 'youtube-video' as an element or attribute. -->
+            <div class="embed-responsive embed-responsive-16by9">
+				<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/jO58Zk826Tc" ></iframe>
+            </div>
+          </div>
+          <div class="item item-divider">
+            <button class="button button-outline button-block button-positive">
+              Share this Video
+            </button>
+          </div>
+        </div>
+		      <div class="list card">
+          <div class="item item-text-wrap">
+            <h2>World's Most DANGEROUS Route Ever... !!!</h2>
+            <p><i class="ion ion-eye"></i> 35,893,787</p>
+          </div>
+          <div class="item item-image">
+            <!-- <img ng-src="{{video.snippet.thumbnails.high.url}}"> -->
+            <!-- Use 'youtube-video' as an element or attribute. -->
+            <div class="embed-responsive embed-responsive-16by9">
+				<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/PUm-Ns2Ea6w" ></iframe>
+            </div>
+          </div>
+          <div class="item item-divider">
+            <button class="button button-outline button-block button-positive">
+              Share this Video
+            </button>
+          </div>
+        </div>
+<!--
+        <div class="list card" ng-repeat="video in videos" ng-if="!wordpress.show">
+          <div class="item item-text-wrap">
+            <h2>{{video.snippet.title}}</h2>
+            <p><i class="ion ion-ios-calendar-outline"></i> {{video.snippet.publishedAt | limitTo: 10}}</p>
+          </div>
+          <div class="item item-image">
+            <div class="embed-responsive embed-responsive-16by9">
+              <youtube-video class="embed-responsive-item" video-id="video.id.videoId" player-vars="playerVars"></youtube-video>
+            </div>
+          </div>
+          <div class="item item-divider">
+            <button class="button button-outline button-block button-positive" ng-click="socialShare(video.snippet.title, video.snippet.thumbnails.high.url, (&apos;https://www.youtube.com/watch?v=&apos; + video.id.videoId))">
+              Share this Video
+            </button>
+          </div>
+        </div>
+
+        <div class="list card" ng-repeat="post in posts" ng-if="wordpress.show">
+          <div class="item item-text-wrap">
+            <h2>{{post.title}}</h2>
+            <p><i class="ion ion-ios-calendar-outline"></i> {{post.date | limitTo: 10}}</p>
+          </div>
+          <div class="item item-image">
+            <div class="embed-responsive embed-responsive-16by9">
+              <youtube-video class="embed-responsive-item" video-id="post.meta.youtube_video_id" player-vars="playerVars"></youtube-video>
+            </div>
+          </div>
+          <div class="item item-divider">
+            <button class="button button-outline button-block button-positive" ng-click="socialShare(post.title, post.featured_image.source, post.link)">
+              Share this Video
+            </button>
+          </div>
+        </div>
+-->
+
+<!--
+         <ion-infinite-scroll
+          on-infinite="loadOlderVideos()"
+          distance="30%">
+        </ion-infinite-scroll> 
+-->
+      </ion-content>
+    </ion-pane>
+  </body>
+</html>

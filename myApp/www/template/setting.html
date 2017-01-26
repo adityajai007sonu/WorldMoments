@@ -1,0 +1,48 @@
+<div class="modal slide-in-up">
+  <header class="bar bar-header bar-positive">
+    <h1 class="title">Setting</h1>
+    <button class="button button-icon icon ion-ios-close" ng-click="closeSetting()"></button>
+  </header>
+  <ion-content class="padding has-header">
+    <ul class="list">
+      <li class="item item-toggle">
+         No Ads
+         <label class="toggle toggle-positive">
+           <input type="checkbox" ng-model="wordpress.show" ng-click="wordpress.useWordpress()">
+           <div class="track">
+             <div class="handle"></div>
+           </div>
+         </label>
+      </li>
+    </ul>
+    <!-- <p>{{wordpress}}</p> -->
+   	<div class="card" ng-show="!wordpress.show">
+      <div class="item item-text-wrap">
+        <div class="list">
+          <form name="editSettingForm" novalidate>
+            <label class="item item-input item-floating-label">
+              <span class="input-label">Contact Email</span>
+              <input type="text" placeholder="pictodeveloper@gmail.com"ng-required="true">
+            </label>
+            <label class="item item-input item-floating-label">
+              <span class="input-label">Subject</span>
+              <input type="text" placeholder="Send the Link for No Ad App" ng-required="true">
+            </label>
+            <label class="item item-input item-floating-label">
+              <span class="input-label">Comment</span>
+              <input type="text" placeholder="Comment">
+            </label>
+            <label>
+              <button class="button button-block button-positive" ng-disabled="editSettingForm.$invalid" ng-click="closeSetting()">
+                REQUEST
+              </button>
+            </label>
+          </form>
+        </div>
+      </div>
+    </div>
+    
+    
+	
+  </ion-content>
+</div>
